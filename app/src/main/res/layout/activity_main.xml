@@ -9,6 +9,12 @@
     android:gravity="center">
 
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"/>
+
+
 
     <TextView
         android:id="@+id/steptext"
@@ -29,8 +35,6 @@
         android:layout_marginBottom="50dp"/>
 
 
-
-
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
@@ -38,22 +42,19 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_border"
         android:text="GO!"
-        android:textColor="@color/white"/>
-    <!--android:onClick="ShowPopup"/>-->
-
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_border_red"
         android:text="Stop"
         android:textColor="@color/red"
-        android:layout_marginTop="20dp"
-        android:visibility="gone"/>
-
-
+        android:visibility="gone" />
+    <!--android:onClick="ShowPopup"/>-->
 
 
 </LinearLayout>

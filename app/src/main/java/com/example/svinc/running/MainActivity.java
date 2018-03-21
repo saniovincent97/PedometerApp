@@ -1,12 +1,16 @@
 package com.example.svinc.running;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,7 +18,7 @@ import java.util.Locale;
 import android.os.Handler;
 
 
-public class MainActivity  extends AppCompatActivity implements SensorEventListener, StepListener {
+public class MainActivity  extends AppCompatActivity implements SensorEventListener, StepListener, GestureDetector.OnGestureListener {
     private TextView stepIndicator;
     private TextView timeTracker;
     private Button runStart;
@@ -26,6 +30,7 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     private int numSteps;
     private int seconds = 0;
     private boolean running;
+    private GestureDetectorCompat detector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,9 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
         runStop = findViewById(R.id.stop);
         timeTracker = findViewById(R.id.timetracker);
         runTimer();
+
+
+        detector = new GestureDetectorCompat(this, this);
 
 
 
@@ -76,13 +84,6 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
     }
 
-//        public void onClickStart(View view) {
-//            running = true;
-//        }
-//        //Stop the stopwatch running when the Stop button is clicked.
-//        public void onClickStop(View view) {
-//            running = false;
-//        }
 
     private void runTimer() {
         final TextView timeView = (TextView)findViewById(R.id.timetracker);
@@ -131,5 +132,41 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
         stepIndicator.setText(TEXT_NUM_STEPS + numSteps);
     }
 
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        startActivity(new Intent(MainActivity.this, Settings.class));
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        detector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
 }
 
