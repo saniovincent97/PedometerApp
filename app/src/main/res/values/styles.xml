@@ -1,12 +1,38 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Dark" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#2f333f</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
+        <item name="textcolour">@color/black</item>
+        <item name="backgroundcolour">@color/colorPrimaryDark</item>
+        <item name="sectionbackground">@color/white</item>
+        <item name="tintcolour">@color/black</item>
+        <item name="buttoncolour">@color/orange</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+
+    <style name="Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name = "android:windowBackground">@color/white</item>
+        <item name="colorPrimary">#2196f3</item>
+        <item name="colorPrimaryDark">#1976d2</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textcolour">#808080</item>
+        <item name="backgroundcolour">#fcfcfc</item>
+        <item name="sectionbackground">@color/white</item>
+        <item name="tintcolour">@color/white</item>
+        <item name="buttoncolour">#2196f3</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
 
 </resources>

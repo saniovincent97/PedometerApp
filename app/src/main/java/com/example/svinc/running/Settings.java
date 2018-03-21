@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,20 +16,48 @@ import android.widget.Switch;
 public class Settings extends AppCompatActivity implements GestureDetector.OnGestureListener{
 
     private GestureDetectorCompat detector;
+    private Switch setTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.Dark);
+        }
+        else setTheme(R.style.Light);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        final Button colourChange = findViewById(R.id.colourChange);
-        colourChange.setOnClickListener(new View.OnClickListener() {
+        setTheme = findViewById(R.id.setTheme);
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme.setChecked(true);
+        }
+        setTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    restartApp();
+                }
+                else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    restartApp();
+                }
+
             }
         });
 
+
         detector = new GestureDetectorCompat(this, this);
+
+
+
+
+    }
+
+    public void restartApp() {
+        Intent i = new Intent(getApplicationContext(),Settings.class);
+        startActivity(i);
+        finish();
 
     }
 

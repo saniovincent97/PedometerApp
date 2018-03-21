@@ -4,16 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.svinc.running.MainActivity"
-    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:gravity="center">
-
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"/>
-
 
 
     <TextView
@@ -21,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textColor="@color/white"
         android:textSize="50dp"
+        android:textColor="?attr/textcolour"
         android:layout_marginBottom="50dp"/>
 
 
@@ -31,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00:00"
-        android:textColor="@color/white"
+        android:textColor="?attr/textcolour"
         android:layout_marginBottom="50dp"/>
 
 
@@ -41,8 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_border"
-        android:text="GO!"
-        android:textColor="@color/white" />
+        android:text="GO!" />
 
     <Button
         android:id="@+id/stop"
@@ -54,7 +45,6 @@
         android:text="Stop"
         android:textColor="@color/red"
         android:visibility="gone" />
-    <!--android:onClick="ShowPopup"/>-->
 
 
 </LinearLayout>

@@ -35,6 +35,7 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -46,9 +47,7 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
         timeTracker = findViewById(R.id.timetracker);
         runTimer();
 
-
         detector = new GestureDetectorCompat(this, this);
-
 
 
         runStart.setOnClickListener(new View.OnClickListener() {
