@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.svinc.running.MainActivity">
+    tools:context="com.example.svinc.running.MainActivity"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
 
     <TextView
+        android:id="@+id/steptext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:layout_marginBottom="50dp"/>
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/timetracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:layout_marginBottom="50dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_border"
+        android:text="GO!"
+        android:textColor="@color/white"/>
+    <!--android:onClick="ShowPopup"/>-->
+
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_border_red"
+        android:text="Stop"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+
+
+
+</LinearLayout>
