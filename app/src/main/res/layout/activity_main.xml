@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.example.svinc.running.MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="?attr/backgroundcolour">
 
 
     <TextView

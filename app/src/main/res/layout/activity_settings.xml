@@ -24,14 +24,15 @@
             <TextView
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Title"
+                android:text="Settings"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/textcolour"
-                android:text="Just some content that can be added in later"
+                android:text="Configurations that can be tweaked in runtime"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -52,26 +53,26 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Stuff goes here" />
-            <RadioButton
+                android:text="Icons/Buttons" />
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enable Icons"
+                android:text="W.I.P"
                 android:textColor="?attr/textcolour"
                 android:layout_marginTop="5dp"
                 android:buttonTint="?attr/tintcolour"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Check"
+                android:text="Enable Icons"
                 android:textColor="?attr/textcolour"
                 android:buttonTint="?attr/tintcolour"/>
-            <Button
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Button"
-                android:background="?attr/buttoncolour"/>
-
+                android:text="W.I.P"
+                android:textColor="?attr/textcolour"
+                android:buttonTint="?attr/tintcolour"/>
         </LinearLayout>
 
 
@@ -98,11 +99,55 @@
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dark Mode"
+                android:text="Shadow Realm"
+                android:textColor="?attr/textcolour"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="?attr/textcolour"
+                android:text="Work In Progress"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"/>
+            <Switch
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Forest Green"
+                android:textColor="?attr/textcolour"/>
+            <Switch
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Ruby Red"
+                android:textColor="?attr/textcolour"/>
+            <Switch
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Icy Frost"
+                android:textColor="?attr/textcolour"/>
+            <Switch
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Atlantic Horizon"
                 android:textColor="?attr/textcolour"/>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Home"
+            android:background="?attr/buttoncolour"/>
+    </LinearLayout>
 
 
 </LinearLayout>

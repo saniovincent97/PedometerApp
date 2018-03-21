@@ -9,6 +9,7 @@ import android.hardware.SensorManager;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,6 +35,13 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.Dark);
+        }
+        else setTheme(R.style.Light);
+
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
