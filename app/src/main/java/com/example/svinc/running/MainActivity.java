@@ -40,8 +40,6 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
             setTheme(R.style.Dark);
         }
         else setTheme(R.style.Light);
-
-
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);

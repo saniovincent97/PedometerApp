@@ -20,6 +20,7 @@ public class Settings extends AppCompatActivity implements GestureDetector.OnGes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
             setTheme(R.style.Dark);
         }
