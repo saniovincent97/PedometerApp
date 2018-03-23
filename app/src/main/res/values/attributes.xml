@@ -6,5 +6,7 @@
         <attr name="textcolour" format="color"></attr>
         <attr name="tintcolour" format="color"></attr>
         <attr name="buttoncolour" format="color"></attr>
+        <attr name="shoes" format="reference"></attr>
+        <attr name="stopwatch" format="reference"></attr>
     </declare-styleable>
 </resources>
