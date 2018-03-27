@@ -8,5 +8,6 @@
         <attr name="buttoncolour" format="color"></attr>
         <attr name="shoes" format="reference"></attr>
         <attr name="stopwatch" format="reference"></attr>
+        <attr name="border" format="reference"></attr>
     </declare-styleable>
 </resources>

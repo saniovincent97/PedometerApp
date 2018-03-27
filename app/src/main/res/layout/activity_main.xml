@@ -18,21 +18,24 @@
         android:orientation="vertical"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        android:background="?attr/border">
 
         <LinearLayout
-            android:layout_marginTop="60dp"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="60dp">
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
 
 
             <ImageView
+                android:id="@+id/stepicon"
                 android:layout_width="25dp"
                 android:layout_height="71dp"
                 android:layout_gravity="start"
@@ -51,7 +54,6 @@
                 android:textSize="50dp" />
 
 
-
         </LinearLayout>
 
 
@@ -60,11 +62,12 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
 
             <ImageView
+                android:id="@+id/stopicon"
                 android:layout_width="25dp"
                 android:layout_height="29dp"
                 android:layout_gravity="end"
@@ -83,14 +86,12 @@
         </LinearLayout>
 
 
-
-
         <Button
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_border"
+            android:background="?attr/border"
             android:text="GO!"
             android:textColor="?attr/textcolour" />
 
@@ -105,6 +106,86 @@
             android:textColor="@color/red"
             android:visibility="gone" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="?attr/border">
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginRight="2dp">
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:hint="weight (km)"
+                    android:textColorHint="?attr/tintcolour"
+                    android:textColor="?attr/textcolour"
+                    android:digits="0123456789"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="height (cm)"
+                    android:textColorHint="?attr/tintcolour"
+                    android:textColor="?attr/textcolour"
+                    android:digits="0123456789"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="numberDecimal"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="2dp"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="BMI Status"
+                    android:textAlignment="center"
+                    android:textColor="?attr/textcolour"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/calculate"
+                    android:layout_width="110dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:background="?attr/border"
+                    android:text="Calculate"
+                    android:textColor="?attr/textcolour" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
     </LinearLayout>
+
+
+
 
 </android.support.constraint.ConstraintLayout>

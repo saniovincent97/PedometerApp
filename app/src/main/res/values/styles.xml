@@ -10,10 +10,11 @@
         <item name="textcolour">@color/white</item>
         <item name="backgroundcolour">@color/colorPrimaryDark</item>
         <item name="sectionbackground">@color/darkGrey</item>
-        <item name="tintcolour">@color/black</item>
+        <item name="tintcolour">@color/white</item>
         <item name="buttoncolour">@color/orange</item>
-        <item name="stopwatch">@drawable/stopwatch_white</item>
-        <item name="shoes">@drawable/shoes_white</item>
+        <item name="stopwatch">@drawable/stopwatchwhite</item>
+        <item name="shoes">@drawable/shoeswhite</item>
+        <item name="border">@drawable/button_border</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
 
@@ -30,6 +31,7 @@
         <item name="buttoncolour">#2196f3</item>
         <item name="stopwatch">@drawable/stopwatch</item>
         <item name="shoes">@drawable/shoes</item>
+        <item name="border">@drawable/button_border_black</item>
         <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
 

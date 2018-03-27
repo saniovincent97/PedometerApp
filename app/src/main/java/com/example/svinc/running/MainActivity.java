@@ -14,6 +14,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.Locale;
 import android.os.Handler;
@@ -32,6 +34,11 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     private int seconds = 0;
     private boolean running;
     private GestureDetectorCompat detector;
+    ImageView shoeIcon;
+    ImageView watchIcon;
+    EditText height, weight;
+    TextView result;
+    Button calculate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +58,23 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
         runStart = findViewById(R.id.start);
         runStop = findViewById(R.id.stop);
         timeTracker = findViewById(R.id.timetracker);
+        shoeIcon = findViewById(R.id.stepicon);
+        watchIcon = findViewById(R.id.stopicon);
+        height = findViewById(R.id.height);
+        weight = findViewById(R.id.weight);
+        result = findViewById(R.id.result);
+        calculate = findViewById(R.id.calculate);
         runTimer();
 
         detector = new GestureDetectorCompat(this, this);
+
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CalculateBMI();
+            }
+        });
 
 
         runStart.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +105,49 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
             }
         });
+
+
+
+    }
+
+    private void CalculateBMI() {
+        String heightStr =  height.getText().toString();
+        String weightStr =  weight.getText().toString();
+
+        if (heightStr != null && !"".equals(heightStr) && weightStr != null && !"".equals(weightStr)){
+            float heightValue = Float.parseFloat(heightStr) / 100;
+            float weightValue = Float.parseFloat(weightStr);
+            float bmi = weightValue / (heightValue * heightValue);
+            
+            displayBMI(bmi);
+
+        }
+    }
+
+    private void displayBMI(float bmi) {
+
+        String bmiLabel = "";
+
+        if (Float.compare(bmi, 15f) <= 0){
+            bmiLabel = "Extremely underweight!";
+        } else if (Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0){
+            bmiLabel = "Severely underweight";
+        } else if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0){
+            bmiLabel = "Underweight!";
+        } else if (Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0){
+            bmiLabel = "Healthy!";
+        } else if (Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <= 0){
+            bmiLabel = "Overweight!";
+        } else if (Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <= 0){
+            bmiLabel = "Obese! (Lv 1)";
+        } else if (Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <= 0) {
+            bmiLabel = "Obese! (Lv 2)";
+        } else {
+            bmiLabel = "Obese! (Lv 3)";
+        }
+
+        result.setText(bmiLabel);
+
 
 
 

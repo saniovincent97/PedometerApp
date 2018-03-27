@@ -10,13 +10,18 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 
 public class Settings extends AppCompatActivity implements GestureDetector.OnGestureListener{
 
     private GestureDetectorCompat detector;
     private Switch setTheme;
+    private CheckBox changeIcon;
+    ImageView shoeIcon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class Settings extends AppCompatActivity implements GestureDetector.OnGes
         setContentView(R.layout.activity_settings);
 
         setTheme = findViewById(R.id.setTheme);
+        changeIcon = findViewById(R.id.changeIcons);
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             setTheme.setChecked(true);
         }
@@ -46,6 +52,16 @@ public class Settings extends AppCompatActivity implements GestureDetector.OnGes
 
             }
         });
+
+//
+//        changeIcon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//
+//            }
+//        });
+
+
 
 
         detector = new GestureDetectorCompat(this, this);
