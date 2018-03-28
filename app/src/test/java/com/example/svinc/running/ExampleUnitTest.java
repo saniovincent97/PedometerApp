@@ -14,4 +14,27 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+    @Test
+    public void testCalculateBMI() throws Exception{
+        int result = 0;
+        int weight = 65;
+        int height = 165;
+        assertEquals(result, weight / (height * height));
+    }
+
+    @Test
+    public void testSwitchTheme() throws Exception{
+        boolean DarkTheme = false;
+        boolean LightTheme = true;
+        assertEquals(LightTheme, DarkTheme);
+    }
+
+    @Test
+    public void testNumOfSteps() throws Exception{
+        int numSteps = 5;
+        assertEquals(5, 3 + 2);
+    }
+
+
 }
+

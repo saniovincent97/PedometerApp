@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Running</string>
+    <string name="app_name">Fitness Tracker</string>
+    <string name="stop_run">Stop</string>
+    <string name="play_run">GO!</string>
+    <string name="hint_weight">weight (km)</string>
+    <string name="hint_height">height (cm)</string>
+    <string name="bmi_status">BMI Status</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="timer">00:00:00</string>
+    <string name="step_indicator">0</string>
+    <string name="icon_desc">Icon for step indicator</string>
 </resources>

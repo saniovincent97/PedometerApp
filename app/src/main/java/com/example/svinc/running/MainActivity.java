@@ -1,6 +1,4 @@
 package com.example.svinc.running;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -23,7 +21,7 @@ import android.os.Handler;
 
 public class MainActivity  extends AppCompatActivity implements SensorEventListener, StepListener, GestureDetector.OnGestureListener {
     private TextView stepIndicator;
-    private TextView timeTracker;
+    public TextView timeTracker;
     private Button runStart;
     private Button runStop;
     private StepDetector simpleStepDetector;
@@ -155,7 +153,7 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
 
     private void runTimer() {
-        final TextView timeView = (TextView)findViewById(R.id.timetracker);
+        final TextView timeView = findViewById(R.id.timetracker);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
             @Override
@@ -237,5 +235,8 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
         detector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
+
+
+
 }
 

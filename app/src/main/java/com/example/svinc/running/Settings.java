@@ -1,26 +1,21 @@
 package com.example.svinc.running;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.Switch;
 
 public class Settings extends AppCompatActivity implements GestureDetector.OnGestureListener{
 
     private GestureDetectorCompat detector;
-    private Switch setTheme;
-    private CheckBox changeIcon;
-    ImageView shoeIcon;
+    public Switch setTheme;
+    public CheckBox changeIcon;
 
 
     @Override
