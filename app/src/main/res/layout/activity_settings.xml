@@ -24,7 +24,7 @@
             <TextView
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Settings"
+                android:text="@string/settings_text"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/textcolour"
-                android:text="Configurations that can be tweaked in runtime"
+                android:text="@string/settings_desc"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
@@ -54,11 +54,11 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Icons/Buttons" />
+                android:text="@string/setting_one" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="W.I.P"
+                android:text="@string/checkbox_one"
                 android:textColor="?attr/textcolour"
                 android:layout_marginTop="5dp"
                 android:buttonTint="?attr/tintcolour"/>
@@ -66,13 +66,13 @@
                 android:id="@+id/changeIcons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Disable Icons"
+                android:text="@string/checkbox_two"
                 android:textColor="?attr/textcolour"
                 android:buttonTint="?attr/tintcolour"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="W.I.P"
+                android:text="@string/checkbox_one"
                 android:textColor="?attr/textcolour"
                 android:buttonTint="?attr/tintcolour"/>
         </LinearLayout>
@@ -95,45 +95,45 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Set Theme"/>
+                android:text="@string/setting_two"/>
             <Switch
                 android:id="@+id/setTheme"
                 android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Shadow Realm"
+                android:text="@string/theme_one"
                 android:textColor="?attr/textcolour"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="?attr/textcolour"
-                android:text="Work In Progress"
+                android:text="@string/progress_text"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="center"/>
             <Switch
                 android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Forest Green"
+                android:text="@string/theme_two"
                 android:textColor="?attr/textcolour"/>
             <Switch
                 android:layout_marginTop="3dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Ruby Red"
+                android:text="@string/theme_three"
                 android:textColor="?attr/textcolour"/>
             <Switch
                 android:layout_marginTop="3dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Icy Frost"
+                android:text="@string/theme_four"
                 android:textColor="?attr/textcolour"/>
             <Switch
                 android:layout_marginTop="3dp"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Atlantic Horizon"
+                android:text="@string/theme_five"
                 android:textColor="?attr/textcolour"/>
         </LinearLayout>
 
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Home"
+            android:text="@string/home_button"
             android:background="?attr/buttoncolour"/>
     </LinearLayout>
 
