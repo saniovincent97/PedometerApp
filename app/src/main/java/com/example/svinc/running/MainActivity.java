@@ -109,6 +109,9 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     }
 
     private void CalculateBMI() {
+
+        //calculates the height and weight values into a BMI score
+
         String heightStr =  height.getText().toString();
         String weightStr =  weight.getText().toString();
 
@@ -123,6 +126,8 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     }
 
     private void displayBMI(float bmi) {
+
+        //retrieves the BMI score and displays a status on the main activity
 
         String bmiLabel = "";
 
@@ -153,6 +158,9 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
 
     private void runTimer() {
+
+        // keeps tracks of the elapsed time and displays it
+
         final TextView timeView = findViewById(R.id.timetracker);
         final Handler handler = new Handler();
         handler.post(new Runnable() {
@@ -173,6 +181,9 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
     }
 
     private void stepClear() {
+
+        // clears the stopwatch
+
         stepIndicator.setText("0");
         numSteps = 0;
     }
@@ -187,6 +198,8 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+        // updates the accelerometer on movement
+
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             simpleStepDetector.updateAccel(
                     event.timestamp, event.values[0], event.values[1], event.values[2]);
@@ -226,6 +239,9 @@ public class MainActivity  extends AppCompatActivity implements SensorEventListe
 
     @Override
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+
+        // switches to the secondary activity on swipe
+
         startActivity(new Intent(MainActivity.this, Settings.class));
         return true;
     }

@@ -21,6 +21,8 @@ public class Settings extends AppCompatActivity implements GestureDetector.OnGes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //detects current theme and changes it
+
         if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
             setTheme(R.style.Dark);
         }
